@@ -5,7 +5,7 @@ streamlit.title('My parents healthy dinner')
 streamlit.text('Hi Trupti What are you making today in dinner ?? ')
 
 fruits_list = pandas.read_csv('https://uni-lab-files.s3.us-west-2.amazonaws.com/dabw/fruit_macros.txt')
-my_fruit_list = my_fruit_list.set_index('Fruit')
+fruit_list = fruit_list.set_index('Fruit')
 
 streamlit.dataframe(fruits_list)
 

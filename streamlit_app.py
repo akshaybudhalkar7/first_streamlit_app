@@ -9,11 +9,12 @@ fruits_list = fruits_list.set_index('Fruit')
 
 streamlit.dataframe(fruits_list)
 
-
 # Let's put a pick list here so they can pick the fruit they want to include 
-streamlit.multiselect("Pick some fruits:", list(fruits_list.index), ['Banana','Avocado'])
+fruit_selected = streamlit.multiselect("Pick some fruits:", list(fruits_list.index), ['Banana','Avocado'])
+fruit_to_show = fruits_list.loc[fruit_selected]
+
 
 # Display the table on the page.
-streamlit.dataframe(fruits_list)
+streamlit.dataframe(fruit_to_show)
 
 

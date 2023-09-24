@@ -27,5 +27,8 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 streamlit.dataframe(fruityvice_normalized)
 
 
+input_text = streamlit.text_input('which fruit you want to choose ?', 'kiwi')
+streamlit.write('the user entered', input_text)
+
 
 

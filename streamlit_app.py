@@ -26,7 +26,7 @@ input_text = streamlit.text_input('which fruit you want to choose ?', 'kiwi')
 streamlit.write('the user entered', input_text)
 
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + input_text)
-
+streamlit.stop()
 # write your own comment -what does the next line do? 
 fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # write your own comment - what does this do?
